@@ -1,0 +1,35 @@
+.fadeInAndUp {
+    animation: fadeInAndUp 1000ms;
+    opacity: 0.0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAndUp {
+    from {
+        opacity: 0.0;
+        transform: translateY(20px)
+    }
+    to   { opacity: 1.0; }
+}
+
+.fadeInLeft {
+    animation: fadeInAndLeft 1000ms;
+    opacity: 0.0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAndLeft {
+    from {
+        opacity: 0.0;
+        transform: translateX(100%)
+    }
+    to   { opacity: 1.0; }
+}
+
+.fadeOutTransition {
+    opacity: 0.0;
+    transform: translateY(-100vh);
+}
+
+.invisible  { opacity: 0.0; }
+.visible    { opacity: 1.0; }

@@ -1,0 +1,160 @@
+@import "./effects.scss";
+
+.TitleSection {
+    transition: all 600ms ease-in;
+
+    > h1 {
+        color: #ffffff;
+        text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.7);
+        font-size: 72px;
+        font-family: 'Lobster Two', sans-serif;
+        letter-spacing: 2.5px;
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}
+
+.LocationSection {
+    transition: all 600ms ease-in;
+    text-align: center;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > h2 {
+        color: #ffffff;
+        font-size: 30px;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-bottom: 36px;
+    }
+}
+
+.BreifSection {
+    transition: all 600ms ease-in;
+    text-align: center;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > p {
+        font-size: 24px;
+        font-family: 'Source Sans Pro', sans-serif;
+        line-height: 34px;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 1.0);
+        letter-spacing: 1.1px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+.RSVPSection {
+    transition: all 600ms ease-in;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+        width: 66.6%;
+        margin: 0 auto;
+    }
+}
+
+.DetailsSection {
+    transition: all 600ms ease-in;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > h2 {
+        margin-bottom: 20px;
+        letter-spacing: 2.2px;
+        font-size: 24px;
+    }
+
+    > div {
+        display: flex;
+
+        > div {
+            &:first-child   { margin-right:6px; }
+            &:last-child    { margin-left:6px;  }
+            flex: 1;
+        }
+    }
+}
+
+.FooterSection {
+    transition: all 600ms ease-in;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+// > .oneAttending {
+//     display: flex;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     justify-content: center;
+//     font-size: 20px;
+//     margin-top: 15px;
+
+//     > span {
+//         text-align: center;
+//         margin: 10px 30px;
+//         position: relative;
+//         cursor: pointer;
+//         color: #d1d1d1;
+//         transition: color 0.3s ease-in-out;
+
+//         @include text-underline();
+//     }
+// }
+
+// > .notAttending {
+//     font-size: 20px;
+//     margin-top: 5px;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     text-align: center;
+//     cursor: pointer;
+
+//     > span {
+//         color: #b1b1b1;
+//         position: relative;
+//         transition: color 0.3s ease-in-out;
+        
+//         @include text-underline();
+//     }
+// }
+
+    // > h2 {
+    //     color: #ffffff;
+    //     text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.7);
+    //     font-size: 30px;
+    //     font-family: 'Lobster Two', sans-serif;
+    //     letter-spacing: 3.5px;
+    //     font-style: italic;
+    //     font-weight: 700;
+    //     margin-bottom:12px;
+    // }
+
+    //     > strong {
+    //         font-weight: 800;
+    //         font-size: 28px;
+    //         padding-bottom: 20px;
+    //         display: block;
+    //     }
+    // }

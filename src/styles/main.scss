@@ -1,0 +1,40 @@
+html, body {
+    // background: #7f9bd0;
+    height: 100%;
+}
+
+:global(#elmish-app) {
+    min-height: 100%;
+    display: flex;
+    align-content: stretch;
+}
+
+.background {
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #7f9bd0;
+    background-image: url(../bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    > .side {
+        opacity: 0.0;
+        background: rgba(0, 0, 0, 0.4);
+        width: 40%;
+        box-sizing: border-box;
+        padding: 70px 60px;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.map {
+    width: 100vw;
+    height: 100vh;
+}
