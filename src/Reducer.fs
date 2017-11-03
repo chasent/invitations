@@ -10,6 +10,10 @@ let updateLandingPage (msg: Msg) (state: PageState) =
     LandingPage { state with Attending = attendees ; Ticks = state.Ticks + 1 }
   | GoToDietaryRequirements ->
     DietaryRequirements { state with Ticks = 0 }
+  | GoToWeddingDetails ->
+    WeddingDetails state
+  | GoToPlanningDetails ->
+    PlanningDetails state
   | DairyFree df ->
     DietaryRequirements { state with DairyFree = df }
   | GlutenFree gf ->
@@ -21,6 +25,10 @@ let updateLandingPage (msg: Msg) (state: PageState) =
 
 let update (msg: Msg) (model: Model) =
   match model with
-  | LandingPage lp  -> updateLandingPage msg lp
+  | LandingPage lp          -> updateLandingPage msg lp
   | DietaryRequirements lp  -> updateLandingPage msg lp
+  | WeddingDetails wd ->
+    match msg with
+    | GoToLandingPage ->
+      LandingPage wd
   | _               -> model

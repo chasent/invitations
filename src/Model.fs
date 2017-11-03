@@ -1,12 +1,12 @@
 module Model
 
 type PageState = {
-    Ticks       : int           ;
-    Attending   : List<string>  ;
-    DairyFree   : bool          ;
-    GlutenFree  : bool          ;
-    Vegetarian  : bool          ;
-    OtherDiet   : string        ;
+    Ticks           : int           ;
+    Attending       : List<string>  ;
+    DairyFree       : bool          ;
+    GlutenFree      : bool          ;
+    Vegetarian      : bool          ;
+    OtherDiet       : string        ;
 }
 
 type Model =
@@ -18,6 +18,9 @@ type Model =
 type Msg =
 | NextTick
 | GoToDietaryRequirements
+| GoToLandingPage
+| GoToWeddingDetails
+| GoToPlanningDetails
 | Attending     of List<string>
 | DairyFree     of bool
 | GlutenFree    of bool

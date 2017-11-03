@@ -23,13 +23,13 @@ let init () =
   // | Some exisitingStorage ->
   //   console.log "Using exisiing state"
   //   exisitingStorage
-  | _ -> WeddingDetails {
-        Ticks     = 0       ;
-        Attending = []      ;
-        DairyFree = false   ;
-        GlutenFree = false  ;
-        Vegetarian = false  ;
-        OtherDiet = ""      ;
+  | _ -> PlanningDetails {
+        Ticks         = 0     ;
+        Attending     = []    ;
+        DairyFree     = false ;
+        GlutenFree    = false ;
+        Vegetarian    = false ;
+        OtherDiet     = ""    ;
       }
 
 let wrappedUpdate (msg:Msg) (model:Model) =

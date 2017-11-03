@@ -2,6 +2,8 @@ source https://nuget.org/api/v2
 
 storage:none
 
+nuget Fable.Remoting.Suave
+nuget FAKE
 nuget FSharp.Core
 nuget Fable.Core
 nuget Fable.Elmish.React
@@ -10,3 +12,4 @@ nuget Fable.Elmish.Debugger
 nuget Fable.Elmish.HMR
 
 clitool dotnet-fable
+nuget Suave

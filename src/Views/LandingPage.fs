@@ -46,8 +46,8 @@ let LandingPageView (model: PageState) dispatch =
         [
             h2 [] [ str "More details" ]
             div [] [
-                 Buttons.Black (fun _ -> dispatch <| Attending []) "The Wedding"
-                 Buttons.Black (fun _ -> dispatch <| Attending []) "Planning your Trip"
+                 Buttons.Black (fun _ -> dispatch GoToWeddingDetails) "The Wedding"
+                 Buttons.Black (fun _ -> dispatch GoToPlanningDetails) "Planning your Trip"
             ]
          ]
  

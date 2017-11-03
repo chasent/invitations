@@ -1,12 +1,9 @@
-var image = {
-    url: './PassengerFerry.svg'
-  };
-
 export default function (mapElement) {
+    if (!mapElement) { return; }
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         zoom: 14,
-        center: new google.maps.LatLng(-36.772924, 174.996108),
+        center: new google.maps.LatLng(-36.784924, 175.03),
         styles: [
             {
                 "featureType": "all",
@@ -181,11 +178,39 @@ export default function (mapElement) {
 
     var map = new google.maps.Map(mapElement, mapOptions);
 
-    var marker = new google.maps.Marker({
+    new google.maps.Marker({
         position: new google.maps.LatLng(-36.7805102,174.9915019),
         map: map,
-        icon: image,
-        title: 'Snazzy!'
+        icon: { url: './PassengerFerry.svg' },
+        title: 'Passenger Ferry'
+    });
+
+    new google.maps.Marker({
+        position: new google.maps.LatLng(-36.809152, 175.026569),
+        map: map,
+        icon: { url: './CarFerry.svg' },
+        title: 'Car Ferry'
+    });
+
+    new google.maps.Marker({
+        position: new google.maps.LatLng(-36.779348, 175.021618),
+        map: map,
+        icon: { url: './Rings.svg' },
+        title: 'Ceremony'
+    });
+    
+    new google.maps.Marker({
+        position: new google.maps.LatLng(-36.789135, 175.067011),
+        map: map,
+        icon: { url: './Wine.svg' },
+        title: 'Reception at Casita Miro'
+    });
+
+    new google.maps.Marker({
+        position: new google.maps.LatLng(-36.787051, 175.077597),
+        map: map,
+        icon: { url: './Rest.svg' },
+        title: 'Rest'
     });
 }
 
