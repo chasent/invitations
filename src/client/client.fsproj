@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Include="Model.fs" />
+    
+    <Compile Include="ServerClient.fs" />
+
+    <Compile Include="Reducer.fs" />
+
+    <Compile Include="Views/Buttons.fs" />
+    <Compile Include="Views/CheckBox.fs" />
+    <Compile Include="Views/RSVP.fs" />
+    <Compile Include="Views/Done.fs" />
+    <Compile Include="Views/PlanningDetails.fs" />
+    <Compile Include="Views/WeddingDetails.fs" />
+    <Compile Include="Views/DietaryRequirements.fs" />
+    <Compile Include="Views/LandingPage.fs" />
+    <Compile Include="Views/Main.fs" />
+
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\shared\shared.fsproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\shared\shared.fsproj" />
+  </ItemGroup>
+
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

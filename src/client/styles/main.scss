@@ -1,3 +1,5 @@
+@import "./effects.scss";
+
 html, body {
     // background: #7f9bd0;
     height: 100%;
@@ -33,14 +35,31 @@ html, body {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .background {
+        background-size: contain;
+
+        > .side {
+            width: 100%;
+        }
+    }
+}
+
+
 .mapContainer {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .map {
     flex: 6;
+}
+
+@media only screen and (max-width: 768px) {
+    .map {
+        display: none;
+    }
 }
 
 .mapKey {
@@ -81,13 +100,18 @@ html, body {
                 padding-left: 18px;
 
                 > h2 {
-                    > strong { letter-spacing: 1.2px; font-weight: 800; }
+                    > strong {
+                        letter-spacing: 1.2px; font-weight: 800;
+                        display: inline-block;
+                        width: 90px;
+                    }
                     display: block;
                     font-size: 22px;
                     text-shadow: 0 2px rgba(0, 0, 0, 0.8)
                 }
 
                 > div {
+                    a { margin-left: 90px; }
                     > strong { letter-spacing: 1.2px; font-weight: 800; }
                     padding: 5px 0;
                     font-size: 16px;
@@ -108,21 +132,70 @@ html, body {
 .EqualColumn {
     display: flex;
 
+    .SideBySide {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-right: 16px;
+        }
+    }
+
     > div {
         flex: 1;
         border-right: 1px solid white;
         text-align: center;
+        padding: 0 16px;
+        margin-bottom: 16px;
+
+        > p {
+            text-align: left;
+        }
+
+        ul {
+            text-align: left;
+
+            > li {
+                margin: 8px 0;
+            }
+        }
     }
 
     > div:last-child {
         border: none;
     }
+
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+        flex-direction: column;
+        > div { border: none; }
+    }
+}
+
+a {
+    transition: all 250ms ease-in-out;
+    color: #ffc171;
+    text-decoration: none;
+    position: relative;
+    @include text-underline();
+    display: inline-block;
+    font-weight: 700;
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.BackButton {
+    margin-top: 36px !important;
+    color: #ffc171 !important;
+    font-size: 42px !important;
+    cursor: pointer;
 }
 
 .DetailsContainer {
     display: flex;
-    width: 100vw;
-    height: 100vh;
     background: #6c8099;
     padding: 20px 0;
     box-sizing: border-box;
@@ -136,12 +209,23 @@ html, body {
         letter-spacing: 2.5px;
         font-style: italic;
         margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .GoBack {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffc171;
+        h1 { cursor: pointer; }
     }
 
     h2 {
         font-size: 18px;
         text-shadow: 0 2px rgba(0, 0, 0, 0.8);
         margin-bottom: 32px;
+        text-align: center;
     }
 
     h3 {
@@ -158,20 +242,36 @@ html, body {
 
     > .ColumnOne {
         order: 2;
-        flex: 3;
+        flex: 1;
         text-shadow: 0 2px rgba(0, 0, 0, 0.6);
         display: flex;
         flex-direction: column;
-        > div { flex: 1; }
+        > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     > .ColumnTwo {
         order: 1;
-        flex: 2;
+        flex: 1;
         text-shadow: 0 2px rgba(0, 0, 0, 0.6);
         border-right: 1px solid white;
         display: flex;
         flex-direction: column;
-        > div { flex: 1; }
+        > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .DetailsContainer {
+        flex-direction: column;
+        
+        > div { padding: 0; }
     }
 }

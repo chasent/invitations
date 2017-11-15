@@ -22,7 +22,7 @@ console.log("Bundling for " + (isProduction ? "production" : "development") + ".
 
 module.exports = {
   devtool: "source-map",
-  entry: resolve('./src/website.fsproj'),
+  entry: resolve('./src/client/client.fsproj'),
   output: {
     filename: 'bundle.js',
     path: resolve('./public'),
@@ -36,7 +36,13 @@ module.exports = {
     contentBase: resolve('./public'),
     port: 8080,
     hot: true,
-    inline: true
+    inline: true,
+    proxy: {
+      '/api/*': {
+        target: "http://localhost:9000",
+        changeOrigin: true
+      }
+    }
   },
   plugins : isProduction ? [] : [
       new webpack.HotModuleReplacementPlugin(),

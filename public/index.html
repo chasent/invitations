@@ -16,10 +16,27 @@
 
   <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-  
+  <style>
+    #LoadingText {
+      width: 100vw;
+      height: 100vh;
+      line-height: 100vh;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.7);
+      font-size: 72px;
+      font-family: 'Lobster Two', sans-serif;
+      letter-spacing: 2.5px;
+      font-style: italic;
+      font-weight: 700;
+      background: #6c8099;
+    }
+  </style>
 </head>
 <body>
-  <div id="elmish-app"></div>
+  <div id="elmish-app">
+    <div id="LoadingText">Loading</div>
+  </div>
   <script src="bundle.js"></script>
 </body>
 </html>
