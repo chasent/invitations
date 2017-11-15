@@ -1,0 +1,15 @@
+[Unit]
+Description=Invitation service
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+EnvironmentFile=-/etc/environment-file
+WorkingDirectory=/home/marc/website/publish
+ExecStart=/usr/bin/dotnet ./server.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=invitation-website
+User=marc
+
+[Install]
+WantedBy=multi-user.target
