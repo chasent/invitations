@@ -1,9 +1,7 @@
-@echo off
-cls
-
 .paket\paket.exe restore
-if errorlevel 1 (
-  exit /b %errorlevel%
-)
 
-packages\FAKE\tools\FAKE.exe build.fsx %*
+npm i
+
+cd .\src\client
+
+dotnet fable yarn-run build
